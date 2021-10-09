@@ -18,28 +18,51 @@
     <!-- fullpage css-->
     <link rel="stylesheet" href="{{asset('css/fullpage.css')}}">
     <!-- full page js -->
-    <script src="{{asset('js/fullpage.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/fullpage.js')}}"></script>
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
 <body>
-    <div class="container">
+    
        <div id="wrapper">
-           <div class="section"></div>
-           <div class="section"></div>
-           <div class="section"></div>
+           <div class="section">
+               <img src="{{asset('img/corporate.jpg')}}" alt="{{asset('img/pirate1.jpg')}}">
+           </div>
+           <div class="section">
+               <div class="slide">
+                    <img src="{{asset('img/pirate1.jpg')}}" alt="{{asset('img/pirate2.jpg')}}">
+               </div>
+               <div class="slide">
+                    <img src="{{asset('img/pirate2.jpg')}}" alt="{{asset('img/pirate2.jpg')}}">
+               </div>
+               <div class="slide">
+                    <img src="{{asset('img/pirate3.jpg')}}" alt="{{asset('img/pirate2.jpg')}}">
+               </div>
+                
+           </div>
+           <div class="section">
+                <img src="{{asset('img/team.jpg')}}" alt="{{asset('img/pirate3.jpg')}}">
+           </div>
            
        </div>
-    </div>
+    
     <div id="splash-screen">
         
             <img src="{{asset('img/mulunge_white.png')}}" alt="{{asset('img/mulunge_white.png')}}">
      
     </div>
+    <script>
+        $(document).ready(function(){
+                $("#wrapper").fullpage();
+        });
+    </script>
     <!-- splash screen java script -->
     <script>
         setTimeout(() => {
             document.getElementById('splash-screen').style.display="none";
-        }, 5000);
+        }, 2000);
+        
     </script>
 </body>
 </html>
